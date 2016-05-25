@@ -64,6 +64,7 @@ import json
 import zipfile
 import collections
 import glob
+from io import BytesIO
 try:
     import urllib2
     urllib23 = urllib2
@@ -83,6 +84,8 @@ class cBinaryFile:
         self.file = file
         if file == '':
             self.infile = sys.stdin
+        elif isinstance(file, BytesIO):
+            self.infile = file
         elif file.lower().startswith('http://') or file.lower().startswith('https://'):
             try:
                 if sys.hexversion >= 0x020601F0:
