@@ -1,5 +1,12 @@
 # pdfid.py
 
+Changes from the original version:
+
+* Add support for pseudo files
+* Make it a python package 
+
+-----------------------------------------------
+
 [This documentation is a copy of the description available in the official website](https://blog.didierstevens.com/programs/pdf-tools/)
 
 This tool is not a PDF parser, but it will scan a file to look for certain PDF keywords, allowing you to identify PDF documents that contain (for example) JavaScript or execute an action when opened. PDFiD will also handle name obfuscation.
